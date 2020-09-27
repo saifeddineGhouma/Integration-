@@ -1,3 +1,17 @@
+/*check if local storage have color */
+const mainColors = localStorage.getItem("color_option");
+console.log(mainColors);
+if (mainColors !== null) {
+  document.documentElement.style.setProperty("--main--color", mainColors);
+
+  document.querySelectorAll(".colors-list li").forEach(element => {
+    element.classList.remove("active");
+
+    if (element.dataset.color === mainColors) {
+      element.classList.add("active");
+    }
+  });
+}
 // toggle class js
 
 document.querySelector(".toggel-setting .fa-cog").onclick = function() {
@@ -7,6 +21,23 @@ document.querySelector(".toggel-setting .fa-cog").onclick = function() {
   document.querySelector(".setting-box").classList.toggle("open");
 };
 
+//  change color site
+
+const colors = document.querySelectorAll(".colors-list li");
+colors.forEach(element => {
+  element.addEventListener("click", e => {
+    var color = e.target.dataset.color;
+    document.documentElement.style.setProperty("--main--color", color);
+    localStorage.setItem("color_option", color);
+
+    /**remove class active */
+    e.target.parentElement.querySelectorAll(".active").forEach(element => {
+      element.classList.remove("active");
+    });
+    /**add class active to element */
+    e.target.classList.add("active");
+  });
+});
 //**slect element */
 let landingPage = document.querySelector(".landing-page");
 //***get array images  */

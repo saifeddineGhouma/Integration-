@@ -1,126 +1,175 @@
 :root {
-    --main--color: #ff9800;
+  --main--color: #ff9800;
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*setting */
 .setting-box {
-    position: fixed;
-    left: -200px;
-    top: 0;
-    background-color: white;
-    z-index: 5;
-    width: 200px;
-    min-height: 100vh;
-    transition: 0.3s;
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+  width: 200px;
+  min-height: 100vh;
+  transition: 0.3s;
 }
 
 .setting-box.open {
-    left: 0px;
+  left: 0px;
 }
 
 .setting-box .toggel-setting {
-    right: -30px;
-    position: absolute;
-    top: 100px;
-    background-color: #fff;
+  right: -30px;
+  position: absolute;
+  top: 100px;
+  background-color: #fff;
 
-    text-align: center;
-    cursor: pointer;
-    border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .setting-box .toggel-setting .fa-cog {
-
-    padding: 8px 0;
-    width: 35px;
-
+  padding: 8px 0;
+  width: 35px;
 }
+
+.setting-box .option-box {
+  padding: 20px;
+}
+
+.setting-box .option-box h4 {
+  margin: 0;
+  color: var(--main--color);
+}
+
+.setting-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.setting-box .option-box .colors-list li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #666;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.setting-box .option-box .colors-list li.active {
+  opacity: 1;
+}
+
+.setting-box .option-box .colors-list li:first-child {
+  background-color: #ff9800;
+}
+
+.setting-box .option-box .colors-list li:nth-child(2) {
+  background-color: red;
+}
+
+.setting-box .option-box .colors-list li:nth-child(3) {
+  background-color: blue;
+}
+
+.setting-box .option-box .colors-list li:nth-child(4) {
+  background-color: green;
+}
+
+.setting-box .option-box .colors-list li:nth-child(5) {
+  background-color: yellow;
+}
+
+/**color edit**/
 
 /**end setting*/
 /* lading page */
 .landing-page {
-    min-height: 100vh;
-    background-image: url("../img/01.jpg");
-    background-size: cover;
-    position: relative;
+  min-height: 100vh;
+  background-image: url("../img/01.jpg");
+  background-size: cover;
+  position: relative;
 }
 
 .landing-page .overlay {
-    background-color: rgb(0, 0, 0, 0.6);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
+  background-color: rgb(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .header-area {
-    position: relative;
-    z-index: 2;
-    color: white;
-    display: flex;
-    padding: 15px;
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  padding: 15px;
 }
 
 .header-area .logo {
-    width: 300px;
-    padding: 15px;
-    font-weight: bold;
+  width: 300px;
+  padding: 15px;
+  font-weight: bold;
 }
 
 .header-area .links {
-    list-style: none;
-    padding-left: 0;
-    padding-right: 20px;
-    width: 100%;
-    text-align: right;
+  list-style: none;
+  padding-left: 0;
+  padding-right: 20px;
+  width: 100%;
+  text-align: right;
 }
 
 .header-area .links li {
-    display: inline-block;
-    margin-left: 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .header-area .links li a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 /*******/
 .header-area .links li a:hover,
 .header-area .links li a.active {
-    color: var(--main--color);
+  color: var(--main--color);
 }
 
 .introduction-text {
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
 }
 
 .introduction-text h1 {
-    font-size: 35;
-    margin: 0 0 12px;
+  font-size: 35;
+  margin: 0 0 12px;
 }
 
 .introduction-text h1 span {
-    color: var(--main--color);
+  color: var(--main--color);
 }
 
 .introduction-text p {
-    line-height: 1.6;
-    font-size: 20px;
-    margin: 0;
+  line-height: 1.6;
+  font-size: 20px;
+  margin: 0;
 }
 
 /* end lading */
