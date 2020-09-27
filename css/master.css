@@ -27,7 +27,6 @@ body {
   position: absolute;
   top: 100px;
   background-color: #fff;
-
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
@@ -40,6 +39,9 @@ body {
 
 .setting-box .option-box {
   padding: 20px;
+  margin: 15px;
+  background-color: #eceff1;
+  text-align: center;
 }
 
 .setting-box .option-box h4 {
@@ -60,7 +62,7 @@ body {
   background-color: #666;
   display: inline-block;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .setting-box .option-box .colors-list li.active {
